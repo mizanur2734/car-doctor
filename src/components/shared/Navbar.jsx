@@ -1,5 +1,7 @@
 import Link from "next/link";
 import React from "react";
+import { FaCartShopping } from "react-icons/fa6";
+import { IoSearch } from "react-icons/io5";
 
 const Navbar = () => {
   const navItems = [
@@ -48,7 +50,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <div className="flex items-center space-x-4">
+            <FaCartShopping />
+            <IoSearch />
+            <a className="btn btn-outline hover:bg-red-500 rounded-md px-8">Appointment</a>
+          </div>
         </div>
       </div>
     </div>
