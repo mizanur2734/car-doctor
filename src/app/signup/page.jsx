@@ -5,8 +5,14 @@ import { AiOutlineGithub } from "react-icons/ai";
 import Link from "next/link";
 
 export default function page() {
-    const handleLogin = async () =>{
-        
+    const handleSignUp = async (event) =>{
+        event.preventDefault();
+        const newUser ={
+          name: event.target.name.value,
+          email: event.target.email.value,
+          password: event.target.password.value,
+        }
+        console.log(newUser)
     }
   return (
     <div className="container mx-auto px-24 py-24">
@@ -18,8 +24,18 @@ export default function page() {
           <h6 className="text-3xl font-semibold text-red-600 text-center mb-12">
             Sign Up
           </h6>
-          {/* email */}
-          <form onSubmit={handleLogin}>
+          {/* Name */}
+          <form onSubmit={handleSignUp}>
+            <label htmlFor="email">Name</label>
+            <br />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              className="input mt-3 w-full "
+            />
+            <br />
+            {/* email */}
             <label htmlFor="email">Email</label>
             <br />
             <input

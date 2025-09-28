@@ -7,7 +7,7 @@ export default function Homepage() {
   return (
     <div className=''>
       <Banner/>
-      <About/>
+      {/* <About/> */}
       <Services/>
     </div>
   )
